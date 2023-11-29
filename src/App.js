@@ -1,15 +1,24 @@
 import { Toaster } from "react-hot-toast";
 import "./App.css";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
-import Staff from "./Staff";
+import Staff from "./UI/Staff";
+import AppLayout from "./UI/AppLayout";
+import PageNotFound from "./PageNotFound";
+import Department from "./UI/Department";
+import OnBoardingStaff from "./UI/OnBoardingStaff";
 
 function App() {
   return (
     <div>
       <BrowserRouter>
         <Routes>
-          <Route index element={<Navigate replace to="staff" />} />
-          <Route path="staff" element={<Staff />} />
+          <Route element={<AppLayout />}>
+            <Route index element={<Navigate replace to="staff" />} />
+            <Route path="staff" element={<Staff />} />
+            <Route path="departments" element={<Department />} />
+            <Route path="newstaff" element={<OnBoardingStaff />} />
+          </Route>
+          <Route path="*" element={<PageNotFound />} />
         </Routes>
       </BrowserRouter>
       <Toaster

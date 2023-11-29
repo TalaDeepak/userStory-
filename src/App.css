@@ -37,6 +37,14 @@
   }
 }
 
+select {
+  margin: 0 8px;
+  padding: 4px 8px;
+  font: inherit;
+  font-size: 20px;
+  border-radius: 10px;
+}
+
 .container {
   width: 800px;
   margin: 50px auto;
@@ -74,7 +82,7 @@
 .input {
   padding: 0.8rem 1.2rem;
   border-radius: 5px;
-  size: 20px;
+  font-size: 15px;
   width: 300px;
 }
 
@@ -153,4 +161,34 @@
   backdrop-filter: blur(4px);
   z-index: 1000;
   transition: all 0.5s;
+}
+
+.link {
+  text-decoration: none;
+  font-size: 20px;
+  color: #fff;
+  background-color: #008afa;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+.delete {
+  width: 40rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+
+  & p {
+    color: #000;
+    margin-bottom: 25px;
+  }
+
+  & div {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1.2rem;
+  }
+  & h3 {
+    font-size: 20px;
+  }
 }

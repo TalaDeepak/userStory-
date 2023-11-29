@@ -1,6 +1,9 @@
+import { useSelector } from "react-redux";
 import TableItem from "./TableItem";
 
-function StaffTable({ data, setData }) {
+function StaffTable() {
+  const data = useSelector((state) => state.staff.staffTypes);
+
   if (!data.length) {
     return (
       <div className="container">
@@ -17,7 +20,7 @@ function StaffTable({ data, setData }) {
     <div className="table container">
       <h1 className="heading">Avilable staff type</h1>
       {data.map((item) => (
-        <TableItem setData={setData} item={item} key={item.id} />
+        <TableItem itemName="staffName" item={item} key={item.id} />
       ))}
     </div>
   );
