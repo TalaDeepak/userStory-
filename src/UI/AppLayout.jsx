@@ -1,9 +1,8 @@
-import { Link, Outlet } from "react-router-dom";
+import { Outlet } from "react-router-dom";
+import SideBar from "./SideBar";
+import Header from "./Header";
 
-function AppLayout() {
-  return (
-    <div>
-      <Link className="link" to="/staff">
+/* <Link className="link" to="/staff">
         Staff types
       </Link>
       <Link className="link" to="/departments">
@@ -11,8 +10,16 @@ function AppLayout() {
       </Link>
       <Link className="link" to="/newstaff">
         Add new Staff member
-      </Link>
-      <Outlet />
+      </Link> */
+
+function AppLayout() {
+  return (
+    <div className="layout">
+      <Header />
+      <SideBar />
+      <main className="main">
+        <Outlet />
+      </main>
     </div>
   );
 }

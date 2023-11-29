@@ -4,10 +4,15 @@ import FormRow from "../UI/FormRow";
 import { useDispatch, useSelector } from "react-redux";
 import Option from "./Option";
 import Button from "../UI/Button";
-import { addNewStaff } from "./newStaffSlice";
+import { addNewStaff, editStaff } from "./newStaffSlice";
 import toast from "react-hot-toast";
 
-function OnBoardStaffForm() {
+function OnBoardStaffForm({ onClose, staffToEdit = {} }) {
+  const { id: idToEdit } = staffToEdit;
+  const isEditSession = Boolean(onClose);
+
+  const dispatch = useDispatch();
+
   const staffType = useSelector((state) => state.staff.staffTypes);
   const departments = useSelector((state) => state.department.departments);
 
@@ -18,15 +23,21 @@ function OnBoardStaffForm() {
     department: departments[0]?.departmentName,
   };
 
-  const dispatch = useDispatch();
-
-  const [formData, setFormData] = useState(initialData);
+  const [formData, setFormData] = useState(
+    isEditSession ? staffToEdit : initialData
+  );
 
   function handleSumbit(e) {
     e.preventDefault();
-    if (formData.name === "") return toast.error("Please fill the data");
-    dispatch(addNewStaff(formData));
-    setFormData(initialData);
+    if (isEditSession) {
+      dispatch(editStaff(idToEdit, formData));
+      toast.success("Edited staff successfully");
+      onClose();
+    } else {
+      if (formData.name === "") return toast.error("Please fill the data");
+      dispatch(addNewStaff(formData));
+      setFormData(initialData);
+    }
   }
 
   return (
@@ -80,7 +91,7 @@ function OnBoardStaffForm() {
           </select>
         </FormRow>
 
-        <Button>Create</Button>
+        <Button>{isEditSession ? "Save" : "Create"}</Button>
       </Form>
     </div>
   );
