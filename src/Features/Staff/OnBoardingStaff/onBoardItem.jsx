@@ -1,9 +1,10 @@
 import { useDispatch } from "react-redux";
-import Button from "../UI/Button";
 import { useState } from "react";
 import toast from "react-hot-toast";
-import Window from "./Window";
-import ConfirmDelete from "./ConfirmDelete";
+
+import Button from "../../../UI/Button";
+import Window from "../../Window";
+import ConfirmDelete from "../../ConfirmDelete";
 import OnBoardStaffForm from "./OnBoardStaffForm";
 import { deleteStaff } from "./newStaffSlice";
 
@@ -11,7 +12,6 @@ function OnBoardItem({ item }) {
   const [isOpenModel, setIsOpenModel] = useState(false);
   const [isOpenDeleteModel, setIsOpenDeleteModel] = useState(false);
   const dispatch = useDispatch();
-  console.log(item.id);
 
   function handleDelete() {
     dispatch(deleteStaff(item.id));

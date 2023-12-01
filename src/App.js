@@ -6,6 +6,7 @@ import AppLayout from "./UI/AppLayout";
 import PageNotFound from "./PageNotFound";
 import Department from "./UI/Department";
 import OnBoardingStaff from "./UI/OnBoardingStaff";
+import VacantStaff from "./UI/VacantStaff";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
             <Route path="staff" element={<Staff />} />
             <Route path="departments" element={<Department />} />
             <Route path="newstaff" element={<OnBoardingStaff />} />
+            <Route path="vacantstaff" element={<VacantStaff />} />
           </Route>
           <Route path="*" element={<PageNotFound />} />
         </Routes>

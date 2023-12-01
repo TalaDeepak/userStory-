@@ -1,11 +1,12 @@
-import { useState } from "react";
-import Form from "../UI/Form";
-import FormRow from "../UI/FormRow";
-import { useDispatch, useSelector } from "react-redux";
-import Option from "./Option";
-import Button from "../UI/Button";
-import { addNewStaff, editStaff } from "./newStaffSlice";
 import toast from "react-hot-toast";
+import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+
+import Form from "../../../UI/Form";
+import FormRow from "../../../UI/FormRow";
+import Option from "./Option";
+import Button from "../../../UI/Button";
+import { addNewStaff, editStaff } from "./newStaffSlice";
 
 function OnBoardStaffForm({ onClose, staffToEdit = {} }) {
   const { id: idToEdit } = staffToEdit;

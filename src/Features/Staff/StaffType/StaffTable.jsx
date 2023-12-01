@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-import TableItem from "./TableItem";
+import TableItem from "../../TableItem";
 
 function StaffTable() {
   const data = useSelector((state) => state.staff.staffTypes);

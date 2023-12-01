@@ -19,6 +19,11 @@ function MainNav() {
             Onborading staff
           </NavLink>
         </li>
+        <li>
+          <NavLink className="navlink" to="/vacantstaff">
+            Vacant staff
+          </NavLink>
+        </li>
       </ul>
     </nav>
   );

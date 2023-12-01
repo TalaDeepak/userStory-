@@ -278,6 +278,7 @@ select {
   overflow: hidden;
 }
 
+
 .styledhead {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -292,4 +293,8 @@ select {
   letter-spacing: 0.4px;
   font-weight: 600;
   color: #4b5563;
+}
+
+.styledvacant{
+  grid-template-columns: 1fr 1fr;
 }

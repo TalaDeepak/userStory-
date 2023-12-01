@@ -1,8 +1,8 @@
 import { useState } from "react";
-import Button from "../UI/Button";
+import Button from "../../../UI/Button";
 import toast from "react-hot-toast";
-import Form from "../UI/Form";
-import FormRow from "../UI/FormRow";
+import Form from "../../../UI/Form";
+import FormRow from "../../../UI/FormRow";
 import { useDispatch } from "react-redux";
 import { addStaffType, editStaffType } from "./staffSlice";
 

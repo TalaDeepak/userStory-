@@ -17,6 +17,26 @@ const initialState = {
       department: "Billin",
     },
     {
+      id: 4,
+      name: "Vanshika",
+      gender: "Female",
+      type: "",
+      department: "ICU",
+    },
+    {
+      id: 6,
+      name: "Seenu",
+      gender: "Female",
+      department: "",
+    },
+    {
+      id: 5,
+      name: "Divya",
+      gender: "Female",
+      type: "WatchMan",
+      department: "",
+    },
+    {
       id: 3,
       name: "Ananya",
       gender: "Female",

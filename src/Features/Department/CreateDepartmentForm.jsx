@@ -1,7 +1,7 @@
 import { useState } from "react";
-import Form from "../UI/Form";
-import FormRow from "../UI/FormRow";
-import Button from "../UI/Button";
+import Form from "../../UI/Form";
+import FormRow from "../../UI/FormRow";
+import Button from "../../UI/Button";
 import toast from "react-hot-toast";
 import { useDispatch } from "react-redux";
 import { addDepartmentType, editDepartmentType } from "./departmentSlice";

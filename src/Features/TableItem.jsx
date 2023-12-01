@@ -1,11 +1,12 @@
 import { useState } from "react";
-import Button from "../UI/Button";
-import StaffTypeForm from "./StaffTypeForm";
-import toast from "react-hot-toast";
-import CreateDepartmentForm from "./CreateDepartmentForm";
 import { useDispatch } from "react-redux";
-import { deleteStaffType } from "./staffSlice";
-import { deleteDepartmentType } from "./departmentSlice.js";
+import toast from "react-hot-toast";
+
+import Button from "../UI/Button";
+import StaffTypeForm from "./Staff/StaffType/StaffTypeForm.jsx";
+import CreateDepartmentForm from "./Department/CreateDepartmentForm.jsx";
+import { deleteStaffType } from "./Staff/StaffType/staffSlice.js";
+import { deleteDepartmentType } from "./Department/departmentSlice.js";
 import Window from "./Window.jsx";
 import ConfirmDelete from "./ConfirmDelete.jsx";
 
