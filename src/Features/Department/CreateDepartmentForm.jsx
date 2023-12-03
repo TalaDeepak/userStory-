@@ -37,6 +37,7 @@ function CreateDepartmentForm({ onClose, departmentToEdit = {} }) {
             className="input"
             value={formData}
             type="text"
+            required
             id="type"
             placeholder="Enter Department name here (ICU, Billing )"
           />

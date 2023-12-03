@@ -36,6 +36,7 @@ function StaffTypeForm({ onClose, staffToEdit = {} }) {
             onChange={(e) => setFormData(e.target.value)}
             className="input"
             value={formData}
+            required
             type="text"
             id="type"
             placeholder="Enter staff type (Wardboy, Admin)"

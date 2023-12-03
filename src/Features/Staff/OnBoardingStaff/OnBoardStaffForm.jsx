@@ -53,6 +53,7 @@ function OnBoardStaffForm({ onClose, staffToEdit = {} }) {
             type="text"
             className="input"
             placeholder="Enter staff name"
+            required
           />
         </FormRow>
         <FormRow label="Staff Gender">

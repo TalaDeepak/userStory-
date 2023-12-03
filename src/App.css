@@ -86,6 +86,11 @@ select {
   width: 300px;
 }
 
+.regular label:after {
+  content: " *";
+  color: red;
+}
+
 .regular {
   display: grid;
   align-items: center;
@@ -278,7 +283,6 @@ select {
   overflow: hidden;
 }
 
-
 .styledhead {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -295,6 +299,6 @@ select {
   color: #4b5563;
 }
 
-.styledvacant{
+.styledvacant {
   grid-template-columns: 1fr 1fr;
 }
